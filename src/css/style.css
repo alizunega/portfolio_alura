@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* DEFINICION DE VARIABLES */
+:root {
+    --color-background: linear-gradient(to right, #061a32, #071a33, #0d1f37, #132d4d, #0c2c51);
+    --color-background-cajas: #7b83aecd;
+    --color-background-footer: #203754ae;
+    --color-background-header: #193a62d8;
+    --color-buttons: linear-gradient(220.55deg, #6ec467 0%, #39A0FF 100%);
+    --color-buttons-hover: #a7f7bf;
+    --color-fonts: #fdfdfd;
+    --font-titulo: "Roboto", sans-serif;
+    --font-texto: "Lato", sans-serif;
+    --font-size_titulo: 1rem;
+    --font-size_texto: .8rem;
+}
+
+/* FIN DE DEFINICION DE VARIABLES */
+
+/* ESTILOS DE LA PAGINA */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    min-height: 100dvh;
+}
+
+body {
+    background-image: linear-gradient(rgba(166, 169, 244, 0.822), rgba(212, 162, 248, 0.773)),
+        url("../../assets/bg-port.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--color-fonts);
+    font-size: var(--font-size);
+    font-family: var(--font-titulo);
+    height: auto;
+
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+}
+
+.header--imagen {
+    width: 150px;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+nav {
+    font-family: var(--font-texto);
+    font-size: var(--font-size_texto);
+
+}
+
+section {
+    font-family: var(--font-titulo);
+    font-size: var(--font-size_titulo);
+}
+
+
+
+
+.main--imagen-perfil {
+    width: 150px;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: .7em 2em;
+    gap: 3em;
+}
