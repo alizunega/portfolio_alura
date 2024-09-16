@@ -62,10 +62,10 @@ portfolio_alura
 
 > [!NOTE]
 >
-> Podrá acceder a información de contacto
-> Contiene información sobre proyectos realizados  
-> Contiene información sobre estudios completados
-> Podrá conocer mis hard y soft skills
+> Podrá acceder a información de contacto    
+> Contiene información sobre proyectos realizados      
+> Contiene información sobre estudios completados    
+> Podrá conocer mis hard y soft skills    
 
 ## Construido Con :hammer_and_wrench:
 
