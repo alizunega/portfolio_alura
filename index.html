@@ -11,27 +11,69 @@
 </head>
 
 <body>
-    <header>
-        <img src="./assets/iconos/header/logo.png" alt="Logo Perfil" class="header--imagen">
-        <nav>
-            <ul>
-                <li><a href="#home"><img src="./assets/iconos/header/home.svg" alt="Icono Home">Inicio</a></li>
-                <li><a href="#aboutme"><img src="./assets/iconos/header/perfil.svg" alt="Icono Perfil">Sobre Mi</a></li>
-                <li><a href="#formaciones"><img src="./assets/iconos/header/school.svg"
-                            alt="Icono Formaciones">Educacion</a></li>
-                <li><a href="#skills"><img src="./assets/iconos/header/skills.svg" alt="Icono Haiblidades">Skills</a>
+    <header class="header">
+        <a href="https://www.linkedin.com/in/alicialzunegamza/" target="_blank">
+            <img src="./assets/iconos/header/logo.png" alt="Logo Perfil" class="header--imagen">
+        </a>
+        <nav class="header--nav">
+            <ul class="header--iconos">
+                <li class="header--nav-item"><a href="#home">
+                        <img src="./assets/iconos/header/home.svg" alt="Icono Home">
+                    </a>
                 </li>
-                <li><a href="#proyectos"><img src="./assets/iconos/header/project.svg"
-                            alt="Icono Proyectos">Proyectos</a></li>
-                <li><a href="#contacto"><img src="./assets/iconos/header/contact.svg" alt="Icono Contacto">Contacto</a>
+                <li class="header--nav-item"><a href="#aboutme">
+                        <img src="./assets/iconos/header/perfil.svg" alt="Icono Perfil">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#formaciones">
+                        <img src="./assets/iconos/header/school.svg" alt="Icono Formaciones">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#skills">
+                        <img src="./assets/iconos/header/skills.svg" alt="Icono Haiblidades">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#proyectos">
+                        <img src="./assets/iconos/header/project.svg" alt="Icono Proyectos">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#contacto">
+                        <img src="./assets/iconos/header/contact.svg" alt="Icono Contacto">
+                    </a>
+                </li>
+            </ul>
+            <ul class="header--nav-list" hidden>
+                <li class="header--nav-item"><a href="#home">Inicio
+                        <img src="./assets/iconos/header/home.svg" alt="Icono Home">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#aboutme">Sobre Mi
+                        <img src="./assets/iconos/header/perfil.svg" alt="Icono Perfil">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#formaciones">Educacion
+                        <img src="./assets/iconos/header/school.svg" alt="Icono Formaciones">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#skills">Skills
+                        <img src="./assets/iconos/header/skills.svg" alt="Icono Haiblidades">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#proyectos">Proyectos
+                        <img src="./assets/iconos/header/project.svg" alt="Icono Proyectos">
+                    </a>
+                </li>
+                <li class="header--nav-item"><a href="#contacto">Contacto
+                        <img src="./assets/iconos/header/contact.svg" alt="Icono Contacto">
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main">
         <section>
             <!-- <img src="./assets/bannerTexto.png" alt="Imagen banner" class="imagen main--imagen-banner"> -->
-            <img src="./assets/perfil/perfil2.JPG" alt="Imegen Perfil Alicia Zuñega" class="imagen main--imagen-perfil">
+            <img src="./assets/perfil/" alt="Imegen Perfil Alicia Zuñega" class="imagen main--imagen-perfil">
         </section>
         <section id="aboutme">
             <h1>Sobre Mi</h1>
@@ -47,38 +89,90 @@
                 <li>FrontEnd/React</li>
             </ul>
         </section>
-        <section id="skills">
+        <div id="skills">
             <h1>Skills</h1>
-            <ul>
-                <li>
+            <section class="section--skills-lista">
+                <section class="section--skills-item">
                     <h2>Hard Skills</h2>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Nodejs</li>
-                        <li>GitHub</li>
-                        <li>Inglés Técnico B2</li>
+                    <ul class="section--hard-list">
+                        <li class="section--hard-item">
+                            <img src="./assets/hard skills/html.png" alt="Icono imagen html" class="imagen--hard">
+                            <span>HTML</span>
+                        </li>
+                        <li class="section--hard-item">
+                            <img src="./assets/hard skills/CSS.png" alt="Icono imagen css" class="imagen--hard">
+                            <span>CSS</span>
+                        </li>
+                        <li class="section--hard-item">
+                            <img src="./assets/hard skills/js.png" alt="Icono imagen javascript" class="imagen--hard">
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="section--hard-item">
+                            <img src="./assets/hard skills/nodejs.png" alt="Icono imagen node js" class="imagen--hard">
+                            <span>Nodejs</span>
+                        </li>
+                        <li class="section--hard-item">
+                            <img src="./assets/hard skills/github.png" alt="Icono imagen github" class="imagen--hard">
+                            <span>GitHub</span>
+                        </li>
+                        <li class="section--hard-item">
+                            <img src="./assets/hard skills/eng.png" alt="Icono imagen ingles" class="imagen--hard">
+                            <span>Inglés Técnico B2</span>
+                        </li>
                     </ul>
-                </li>
-                <li>
+                </section>
+                <section class="section--skills-item">
                     <h2>Soft Skills</h2>
-                    <ul>
-                        <li>Trabajo en equipo</li>
-                        <li>Resolución de problemas</li>
-                        <li>Empatia</li>
+                    <ul class="section--soft-list">
+                        <li class="section--soft-item"><img src="./assets/soft skills/equipo.png"
+                                alt="Icono imagen trabajo en equipo" class="imagen--soft">Trabajo en equipo
+                        </li>
+                        <li class="section--soft-item"><img src="./assets/soft skills/comunicacion.png"
+                                alt="Icono imagen comunicacion" class="imagen--soft">Comunicación
+                        </li>
+                        <li class="section--soft-item"><img src="./assets/soft skills/responsabilidad.png"
+                                alt="Icono imagen responsabilidad" class="imagen--soft">Responsabilidad
+                        </li>
+                        <li class="section--soft-item"><img src="./assets/soft skills/empatia.png"
+                                alt="Icono imagen empatia" class="imagen--soft">Empatia
+                        </li>
+                        <li class="section--soft-item"><img src="./assets/soft skills/autoconfianza.png"
+                                alt="Icono imagen autoconfianza" class="imagen--soft">Autoconfianza
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </section>
+                </section>
+            </section>
+        </div>
+        <!-- seccion proyectos  -->
         <section id="proyectos">
             <h1>Proyectos</h1>
+            <!-- crear un grid con tarjetas de proyectos  -->
+            <p>aqui el grid con proyectos</p>
         </section>
+        <!-- seccion contacto -->
         <section id="contacto">
             <h1>Contacto</h1>
+            <p>aqui el formulario de contacto</p>
+            <!-- debo crear un formulario de contacto  -->
         </section>
     </main>
-    <footer></footer>
+    <!-- inicio footer -->
+    <footer class="footer">
+        <p>Alicia Zuñega</p>
+        <p>&copy; 2024 - Todos los derechos reservados</p>
+        <ul class="footer--redes-list">
+            <li class="footer--redes-item">
+                <a href="https://github.com/alizunega" target="_blank">
+                    <img src="./assets/iconos/github-brands-solid.svg" alt="Icono Github" class="icono--footer">
+                </a>
+            </li>
+            <li class="footer--redes-item">
+                <a href="https://www.linkedin.com/in/alicialzunegamza/" target="_blank">
+                    <img src="./assets/iconos/linkedin-in-brands-solid.svg" alt="Icono LinkedIn" class="icono--footer">
+                </a>
+            </li>
+        </ul>
+    </footer>
 
     <script src="./src/js/app.js"></script>
 </body>
