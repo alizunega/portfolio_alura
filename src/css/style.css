@@ -74,7 +74,6 @@ a {
     width: 8em;
 }
 
-
 .header--iconos-list {
     display: flex;
     flex-direction: row;
@@ -87,6 +86,14 @@ a {
     color: black;
     margin: 0 .4em;
 
+}
+
+.header--nav-button,
+.imagen--button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 
