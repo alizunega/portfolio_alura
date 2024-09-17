@@ -3,7 +3,7 @@
 /* DEFINICION DE VARIABLES */
 :root {
     --color-background: linear-gradient(to right, #061a32, #071a33, #0d1f37, #132d4d, #0c2c51);
-    --color-background-cajas: #7b83aecd;
+    --color-background-cajas: #7a8cf7cd;
     --color-background-footer: #203754ae;
     --color-background-header: rgba(166, 169, 244, 0.822);
     --color-buttons: linear-gradient(220.55deg, #6ec467 0%, #39A0FF 100%);
@@ -29,7 +29,7 @@ body {
 }
 
 body {
-    background-image: linear-gradient(rgba(166, 169, 244, 0.822), rgba(212, 162, 248, 0.773)),
+    background-image: linear-gradient(rgba(121, 125, 250, 0.822), rgba(212, 162, 248, 0.773)),
         url("../../assets/bg-port.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -39,7 +39,6 @@ body {
     font-family: var(--font-titulo);
     height: auto;
     width: 100%;
-
 }
 
 
@@ -63,28 +62,30 @@ a {
     padding: 1em;
     background-color: var(--color-background-header);
     font-family: var(--font-titulo);
-    font-size: .7em;
+    font-size: .9em;
 }
 
+
+.imagen--button {
+    background-color: var(--color-background-cajas);
+}
 
 .header--imagen {
     width: 8em;
 }
 
 
-.header--iconos {
+.header--iconos-list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 1em;
-    align-items: center;
 }
 
 .header--nav-item {
     text-decoration: none;
     color: black;
     margin: 0 .4em;
-    align-self: center;
 
 }
 
@@ -115,7 +116,25 @@ section {
 .imagen--soft,
 .imagen--hard {
     width: 5.7em;
-    border-radius: 50%;
+    border: solid white 1px;
+    padding: .4em;
+}
+
+/* formato grilla skills */
+ul.section--hard-list,
+ul.section--soft-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 3em;
+}
+
+.section--hard-item,
+.section--soft-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
 }
 
 
@@ -144,35 +163,61 @@ section {
     width: 3.125em;
 }
 
-@media(min-width: 700px) {
-
+/* pantallas medianas (tablets) */
+@media (min-width: 560px) {
     .header {
-        width: 100%;
+        padding: .6em;
+        font-size: var(--font-size_texto);
+    }
+
+    .header--imagen {
+        width: 7em;
+    }
+
+    /* oculta el boton en pantallas medianas y grandes */
+    .button-menu {
+        display: none;
+    }
+
+    .lista-iconos {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /* margin: 1em; */
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .header--nav-list {
+        display: none;
+    }
+
+    .iconos--list {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+}
+
+/* pantallas grandes (desktops) */
+@media (min-width: 757px) {
+    .header {
         padding: .8em;
-        background-color: var(--color-background-header);
-        font-family: var(--font-titulo);
         font-size: var(--font-size_texto);
         font-weight: 500;
     }
 
-    .header--iconos {
-        display: none;
+    .header--imagen {
+        width: 9em;
+        /* Ajuste para pantallas grandes */
     }
 
     .header--nav-list {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 1em;
-        align-items: center;
+        gap: 2em;
     }
 
+    /* oculta la lista de iconos en pantallas grandes */
+    .header--iconos-list {
+        display: none;
 
-    .header--imagen {
-        width: 9em;
     }
 }
