@@ -205,7 +205,6 @@ textarea {
     padding: .5em .9em;
     box-sizing: border-box;
     border: 1px solid #999;
-    background-color: var(--color-background-cajas);
     color: #000;
 
 }
