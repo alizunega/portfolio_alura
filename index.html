@@ -86,25 +86,28 @@
             <img src="./assets/perfil/alisinfondo.png" alt="Imegen Perfil Alicia Zuñega"
                 class="imagen main--imagen-perfil">
         </section>
-        <section id="aboutme">
+        <div id="aboutme">
             <h1>Sobre Mi</h1>
             <p>De Mendoza, Argentina. 40 años. Estudiante autodidacta de programación.</p>
             <p>He finalizado cursos de Python y Nodejs. Actualmente realizando mi
                 especialización de mano de Alura Latam y ONE en FrontEnd.</p>
-        </section>
-        <section id="formaciones">
+        </div>
+        <div id="formaciones">
             <h1>Educacion</h1>
-            <ul>
-                <li>Python</li>
-                <li>Nodejs</li>
-                <li>FrontEnd/React</li>
-            </ul>
-        </section>
+            <section>
+                <ul>
+                    <li>Python</li>
+                    <li>Nodejs</li>
+                    <li>FrontEnd/React</li>
+                </ul>
+            </section>
+
+        </div>
         <div id="skills">
-            <h1>Skills</h1>
+            <h1>Habilidades</h1>
             <section class="section--skills-lista">
                 <section class="section--skills-item">
-                    <h2>hard_skills</h2>
+                    <h2>Hard Skills</h2>
                     <ul class="section--hard-list">
                         <li class="section--hard-item">
                             <img src="./assets/hard_skills/html5.png" alt="Icono imagen HTML5" class="imagen--hard">
@@ -134,7 +137,7 @@
                     </ul>
                 </section>
                 <section class="section--skills-item">
-                    <h2>soft_skills</h2>
+                    <h2>Soft Skills</h2>
                     <ul class="section--soft-list">
                         <li class="section--soft-item"><img src="./assets/soft_skills/equipo.png"
                                 alt="Icono imagen trabajo en equipo" class="imagen--soft">Trabajo en equipo
@@ -156,22 +159,42 @@
             </section>
         </div>
         <!-- seccion proyectos  -->
-        <section id="proyectos">
+        <div id="proyectos">
             <h1>Proyectos</h1>
             <!-- crear un grid con tarjetas de proyectos  -->
+            <section></section>
             <p>aqui el grid con proyectos</p>
-        </section>
+        </div>
         <!-- seccion contacto -->
-        <section id="contacto">
+        <div id="contacto">
             <h1>Contacto</h1>
-            <p>aqui el formulario de contacto</p>
             <!-- debo crear un formulario de contacto  -->
-        </section>
+            <form action="" method="POST" id="contact-form">
+                <ul>
+                    <li>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" />
+                    </li>
+                    <li>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" />
+                    </li>
+                    <li>
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message"
+                            placeholder="Escriba aquí su consulta. En breve me contactaré con usted."></textarea>
+                    </li>
+                    <li class="item-button">
+                        <button type="submit" class="form-button">Envíe su mensaje</button>
+                    </li>
+                </ul>
+            </form>
+
+        </div>
     </main>
     <!-- inicio footer -->
     <footer class="footer">
-        <p>Alicia Zuñega</p>
-        <p>&copy; 2024 - Todos los derechos reservados</p>
+        <span>&copy; 2024 - Todos los derechos reservados</span>
         <ul class="footer--redes-list">
             <li class="footer--redes-item">
                 <a href="https://github.com/alizunega" target="_blank">
