@@ -31,8 +31,7 @@ body {
 }
 
 body {
-    background-image: var(--color-background),
-        url("../../assets/bg-port.jpeg");
+    background-image: var(--color-background);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
