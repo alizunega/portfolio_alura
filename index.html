@@ -168,21 +168,31 @@
         <!-- seccion contacto -->
         <div id="contacto">
             <h1>Contacto</h1>
+            <div class="alert" hidden>
+                <p>El mensaje se envió correctamente.</p>
+                <p>Me pondré en contacto con usted a la brevedad.</p>
+                <p>Gracias!</p>
+            </div>
             <!-- debo crear un formulario de contacto  -->
-            <form action="" method="POST" id="contact-form">
+            <form id="contact-form">
                 <ul>
                     <li>
                         <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" />
+                        <input type="text" id="name" name="name" autocomplete="name" required />
                     </li>
                     <li>
                         <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" />
+                        <input type="email" id="email" name="email" autocomplete="email" required />
+                    </li>
+                    <li>
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" autocomplete="subject" />
                     </li>
                     <li>
                         <label for="message">Mensaje:</label>
                         <textarea id="message" name="message"
-                            placeholder="Escriba aquí su consulta. En breve me contactaré con usted."></textarea>
+                            placeholder="Escriba aquí su consulta. En breve me contactaré con usted." required
+                            autocomplete="off"></textarea>
                     </li>
                     <li class="item-button">
                         <button type="submit" class="form-button">Envíe su mensaje</button>

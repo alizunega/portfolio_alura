@@ -2,7 +2,7 @@
 
 /* DEFINICION DE VARIABLES */
 :root {
-    --color-background: linear-gradient(to right, #061a32, #071a33, #0d1f37, #132d4d, #0c2c51);
+    --color-background: linear-gradient(rgba(121, 125, 250, 0.822), rgba(212, 162, 248, 0.773));
     --color-background-cajas: #7a8cf7cd;
     --color-background-footer: #203754ae;
     --color-background-header: rgba(166, 169, 244, 0.822);
@@ -29,7 +29,7 @@ body {
 }
 
 body {
-    background-image: linear-gradient(rgba(121, 125, 250, 0.822), rgba(212, 162, 248, 0.773)),
+    background-image: var(--color-background),
         url("../../assets/bg-port.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -150,6 +150,16 @@ ul.section--soft-list {
 }
 
 /* formato formulario contacto */
+
+.alert {
+    position: fixed;
+    background: linear-gradient(rgba(127, 155, 194, 0.933), rgba(125, 125, 125, 0.88));
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+    color: rgb(2, 2, 2);
+    top: 20rem;
+    left: 1em;
+    padding: 2em 4em;
+}
 
 
 form {
@@ -274,6 +284,16 @@ textarea {
         border-radius: 1em;
     }
 
+    .alert {
+        position: fixed;
+        background: linear-gradient(rgba(127, 155, 194, 0.933), rgba(125, 125, 125, 0.88));
+        box-shadow: 0 0 10px rgba(0, 0, 0);
+        color: rgb(2, 2, 2);
+        top: 20rem;
+        left: 20%;
+        padding: 1.5em 3em;
+    }
+
 }
 
 /* pantallas grandes (desktops) */
@@ -298,6 +318,16 @@ textarea {
     .header--iconos-list {
         display: none;
 
+    }
+
+    .alert {
+        position: fixed;
+        background: linear-gradient(rgba(127, 155, 194, 0.933), rgba(125, 125, 125, 0.88));
+        box-shadow: 0 0 10px rgba(0, 0, 0);
+        color: rgb(2, 2, 2);
+        top: 20rem;
+        left: 30%;
+        padding: 4em 3em;
     }
 
     form {
