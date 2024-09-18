@@ -5,9 +5,9 @@
 
 
     --color-background: linear-gradient(180deg, #D9AFD9 0%, #ffffff 33%, #97D9E1 66%, #ffffff 100%);
-    --color-background-cajas: #979aa9ec;
+    --color-background-cajas: #c0d0d7ec;
     --color-background-footer: #203754ae;
-    --color-background-header: rgba(171, 174, 245, 0.714);
+    --color-background-header: rgba(181, 183, 242, 0.714);
     --color-buttons: rgba(152, 211, 246, 0.88);
     --color-buttons-hover: #67d2de;
     --color-fonts: #4c4b4b;
@@ -192,6 +192,7 @@ label {
     width: 100%;
     text-align: right;
     margin-bottom: .7em;
+    font-weight: 500;
 }
 
 input {
@@ -229,6 +230,7 @@ textarea {
     text-align: center;
     border-radius: .3em;
     background-color: var(--color-buttons);
+    font-weight: 600;
 }
 
 .form-button:hover {
@@ -360,8 +362,6 @@ textarea {
         margin: 1em auto;
         width: 50%;
         padding: 1em;
-        border: 1px solid #ccc;
-        border-radius: 1em;
     }
 
     form li+li {
@@ -373,6 +373,7 @@ textarea {
         padding: 1em 2em;
         text-align: center;
         border-radius: .3em;
+
     }
 
     label {
@@ -386,18 +387,9 @@ textarea {
         height: 2.6em;
     }
 
-    input:focus,
-    textarea:focus {
-        border-color: #000;
-    }
-
     textarea {
-        vertical-align: top;
-        height: 5em;
-    }
 
-    .item-button {
-        text-align: center;
+        height: 5em;
     }
 
     .footer {
