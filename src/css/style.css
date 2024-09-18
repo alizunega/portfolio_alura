@@ -2,13 +2,15 @@
 
 /* DEFINICION DE VARIABLES */
 :root {
-    --color-background: linear-gradient(rgba(121, 125, 250, 0.822), rgba(212, 162, 248, 0.773));
-    --color-background-cajas: #7a8cf7cd;
+
+
+    --color-background: linear-gradient(180deg, #D9AFD9 0%, #ffffff 33%, #97D9E1 66%, #ffffff 100%);
+    --color-background-cajas: #979aa9ec;
     --color-background-footer: #203754ae;
-    --color-background-header: rgba(166, 169, 244, 0.822);
-    --color-buttons: linear-gradient(220.55deg, #6ec467 0%, #39A0FF 100%);
-    --color-buttons-hover: #a7f7bf;
-    --color-fonts: #fdfdfd;
+    --color-background-header: rgba(171, 174, 245, 0.714);
+    --color-buttons: rgba(152, 211, 246, 0.88);
+    --color-buttons-hover: #67d2de;
+    --color-fonts: #4c4b4b;
     --font-titulo: "Roboto", sans-serif;
     --font-texto: "Lato", sans-serif;
     --font-size_titulo: 1rem;
@@ -58,11 +60,11 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1em;
     padding: 1em;
     background-color: var(--color-background-header);
     font-family: var(--font-titulo);
     font-size: .9em;
+    width: 100%;
 }
 
 
@@ -96,20 +98,15 @@ a {
     border-radius: 0;
 }
 
-
-/* 
-section {
-    font-family: var(--font-titulo);
-    font-size: var(--font-size_titulo);
-} */
-
+.imagen-banner {
+    width: 100%;
+}
 
 /* formato cuerpo pagina */
 
 .main--imagen-perfil {
-    width: 150px;
-    border-radius: 100%;
-    z-index: 1;
+    width: 200px;
+
 }
 
 
@@ -119,6 +116,19 @@ section {
     margin: .7em 2em;
     gap: 3em;
 }
+
+
+.iconos--redes {
+    display: flex;
+    gap: 1em;
+}
+
+.bio--icono {
+    width: 2.5em;
+
+}
+
+/* skills */
 
 .imagen--soft,
 .imagen--hard {
@@ -156,21 +166,22 @@ ul.section--soft-list {
     background: linear-gradient(rgba(127, 155, 194, 0.933), rgba(125, 125, 125, 0.88));
     box-shadow: 0 0 10px rgba(0, 0, 0);
     color: rgb(2, 2, 2);
-    top: 20rem;
-    left: 1em;
-    padding: 2em 4em;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 1em 2em;
+    border-radius: .8em;
 }
 
 
 form {
-    margin: .5em auto;
+    margin: .8em auto;
     width: 100%;
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0)
+    box-shadow: 0 0 .5em rgb(52, 52, 52)
 }
-
 
 form li+li {
     margin-top: 1em;
@@ -190,20 +201,22 @@ input {
 input,
 textarea {
     width: 100%;
+    padding: .5em .9em;
     box-sizing: border-box;
     border: 1px solid #999;
+    background-color: var(--color-background-cajas);
+    color: #000;
 
 }
 
 input:focus,
 textarea:focus {
-    border-color: #000;
+    border-color: #7004f4;
 }
 
 textarea {
     vertical-align: top;
     height: 6em;
-    padding: .5em .9em;
 }
 
 .item-button {
@@ -212,11 +225,15 @@ textarea {
 
 .form-button {
     align-self: center;
-    padding: .8em;
+    padding: .8em 1.3em;
     text-align: center;
     border-radius: .3em;
+    background-color: var(--color-buttons);
 }
 
+.form-button:hover {
+    background: var(--color-buttons-hover);
+}
 
 
 
@@ -226,6 +243,9 @@ textarea {
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
+    font-family: var(--font-size_texto);
+    margin-bottom: .7em;
+    margin-top: 1em;
 }
 
 .footer--redes-list {
@@ -241,7 +261,7 @@ textarea {
 }
 
 .icono--footer {
-    width: 2em;
+    width: 2.3em;
 }
 
 /* pantallas medianas (tablets) */
@@ -285,12 +305,8 @@ textarea {
     }
 
     .alert {
-        position: fixed;
-        background: linear-gradient(rgba(127, 155, 194, 0.933), rgba(125, 125, 125, 0.88));
-        box-shadow: 0 0 10px rgba(0, 0, 0);
-        color: rgb(2, 2, 2);
-        top: 20rem;
-        left: 20%;
+        top: 10rem;
+        left: 50%;
         padding: 1.5em 3em;
     }
 
@@ -317,16 +333,26 @@ textarea {
     /* oculta la lista de iconos en pantallas grandes */
     .header--iconos-list {
         display: none;
-
     }
 
+    .bio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .presentacion--texto {
+        width: 35em;
+        padding: .6rem;
+        border-radius: 6px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    /* formulario de contacto */
+
     .alert {
-        position: fixed;
-        background: linear-gradient(rgba(127, 155, 194, 0.933), rgba(125, 125, 125, 0.88));
-        box-shadow: 0 0 10px rgba(0, 0, 0);
-        color: rgb(2, 2, 2);
-        top: 20rem;
-        left: 30%;
+        top: 10rem;
+        left: 50%;
         padding: 4em 3em;
     }
 
@@ -344,7 +370,7 @@ textarea {
 
     .form-button {
         align-self: center;
-        padding: .7em;
+        padding: 1em 2em;
         text-align: center;
         border-radius: .3em;
     }
@@ -378,7 +404,7 @@ textarea {
         flex-direction: row;
         align-items: center;
         height: auto;
-        font-family: var(--font-size_texto);
+
     }
 
     .icono--footer {

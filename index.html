@@ -80,20 +80,43 @@
             </ul>
         </nav>
     </header>
+    <!-- Banner -->
+    <picture>
+        <source media="(min-width: 800px)" srcset="../../../assets/bannerTexto.png" />
+        <source media="(min-width: 480px)" srcset="../../../assets/bannerMedio.jpg" />
+        <img src="./assets/bannerMedio.jpg" alt="Banner Portfolio" class="imagen-banner" />
+    </picture>
+
     <main class="main">
-        <section>
-            <!-- <img src="./assets/bannerTexto.png" alt="Imagen banner" class="imagen main--imagen-banner"> -->
+        <section class="bio">
             <img src="./assets/perfil/alisinfondo.png" alt="Imegen Perfil Alicia Zuñega"
                 class="imagen main--imagen-perfil">
+            <aside class="presentacion--texto">
+                <h2>Presentación</h2>
+                <p>Mi nombre es Alicia Zuñega y soy de Mendoza, Argentina.</p>
+                <p>Tengo 40 años.</p>
+                <p>Por el momento, dedico mis días a estudiar para perfeccionarme.</p><br>
+                <div class="iconos--redes">
+                    <a href="https://github.com/alizunega" target="_blank">
+                        <img src="./assets/iconos/github-brands-solid.svg" alt="Icono Github" class="bio--icono">
+                    </a>
+                    <a href="https://www.linkedin.com/in/alicialzunegamza/" target="_blank">
+                        <img src="./assets/iconos/linkedin-in-brands-solid.svg" alt="Icono LinkedIn" class="bio--icono">
+                    </a>
+                </div>
+            </aside>
         </section>
         <div id="aboutme">
-            <h1>Sobre Mi</h1>
-            <p>De Mendoza, Argentina. 40 años. Estudiante autodidacta de programación.</p>
+            <h1>Sobre mi</h1>
+            <p> Me apasiona la tecnología y la programación.</p>
+            <p>Comencé con cursos de DBA de Oracle y también de Redes y telecomunicaciones.</p>
+            <p>La maternidad me llevó a realizar cursos online y ahí descubrí mi vocación.</p>
             <p>He finalizado cursos de Python y Nodejs. Actualmente realizando mi
                 especialización de mano de Alura Latam y ONE en FrontEnd.</p>
+            <p>Aunque aun no encuentro mi rumbo, espero que sea este el curso que me ayude a decidir mi camino.</p>
         </div>
         <div id="formaciones">
-            <h1>Educacion</h1>
+            <h1>Educación</h1>
             <section>
                 <ul>
                     <li>Python</li>
@@ -159,62 +182,68 @@
             </section>
         </div>
         <!-- seccion proyectos  -->
-        <div id="proyectos">
+        <section id="proyectos">
             <h1>Proyectos</h1>
             <!-- crear un grid con tarjetas de proyectos  -->
             <section></section>
             <p>aqui el grid con proyectos</p>
-        </div>
+        </section>
         <!-- seccion contacto -->
-        <div id="contacto">
+        <section id="contacto">
             <h1>Contacto</h1>
+            <p>Quieres contactarme? Completa el siguiente formulario!</p>
             <div class="alert" hidden>
                 <p>El mensaje se envió correctamente.</p>
                 <p>Me pondré en contacto con usted a la brevedad.</p>
                 <p>Gracias!</p>
             </div>
-            <!-- debo crear un formulario de contacto  -->
             <form id="contact-form">
                 <ul>
                     <li>
                         <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required />
+                        <input type="text" id="name" name="name" autocomplete="name" required
+                            placeholder="Ingresa tu nombre" />
                     </li>
                     <li>
                         <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required />
+                        <input type="email" id="email" name="email" autocomplete="email" required
+                            placeholder="Ingresa tu email" />
                     </li>
                     <li>
                         <label for="subject">Asunto:</label>
-                        <input type="text" id="subject" name="subject" autocomplete="subject" />
+                        <input type="text" id="subject" name="subject" autocomplete="subject"
+                            placeholder="El asunto de tu mensaje" />
                     </li>
                     <li>
                         <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message"
-                            placeholder="Escriba aquí su consulta. En breve me contactaré con usted." required
+                        <textarea id="message" name="message" placeholder="Escriba aquí su consulta." required
                             autocomplete="off"></textarea>
                     </li>
                     <li class="item-button">
-                        <button type="submit" class="form-button">Envíe su mensaje</button>
+                        <button type="submit" class="form-button" value="Enviar">Enviar</button>
                     </li>
                 </ul>
             </form>
 
-        </div>
+        </section>
     </main>
     <!-- inicio footer -->
     <footer class="footer">
         <span>&copy; 2024 - Todos los derechos reservados</span>
         <ul class="footer--redes-list">
             <li class="footer--redes-item">
-                <a href="https://github.com/alizunega" target="_blank">
-                    <img src="./assets/iconos/github-brands-solid.svg" alt="Icono Github" class="icono--footer">
+                <a href="mailto:ali.zunega@gmail.com" target="_blank">
+                    <img src="./assets/iconos/contact/mail-redondo.png" alt="Icono Mail" class="icono--footer">
                 </a>
             </li>
             <li class="footer--redes-item">
-                <a href="https://www.linkedin.com/in/alicialzunegamza/" target="_blank">
-                    <img src="./assets/iconos/linkedin-in-brands-solid.svg" alt="Icono LinkedIn" class="icono--footer">
+                <a aria-label="Chat a Telegram" href="https://t.me/AlitaZ16" target="_blank">
+                    <img alt="Icono chat a telegram" src="./assets/iconos/contact/telegram-negro.png"
+                        class="icono--footer" />
                 </a>
+                <!-- <a href="" target="_blank">
+                    <img src="./assets/iconos/contact/contacto.svg" alt="Icono Contactame" class="icono--footer">
+                </a> -->
             </li>
         </ul>
     </footer>

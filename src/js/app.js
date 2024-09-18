@@ -1,3 +1,4 @@
+//activacion del boton menu
 document.addEventListener("click", () => {
   const menu = document.querySelector(".header--nav-list");
   const button = document.querySelector(".header--nav-button");
@@ -13,6 +14,8 @@ document.addEventListener("click", () => {
     }, 4000);
   }
 });
+
+//Manejo de formulario y alerta
 document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
   // Obtén los valores del formulario
