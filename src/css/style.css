@@ -172,14 +172,16 @@ span.card--description {
 }
 
 .imagen--soft,
-.imagen--hard {
+.imagen--hard,
+.imagen--hobbie {
     width: 9em;
     border: solid white 2px;
     padding: 0.5em;
 }
 
 ul.section--hard-list,
-ul.section--soft-list {
+ul.section--soft-list,
+ul.section--hobbie-list {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -187,7 +189,8 @@ ul.section--soft-list {
 }
 
 .section--hard-item,
-.section--soft-item {
+.section--soft-item,
+.section--hobbie-item {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -274,6 +277,13 @@ textarea {
 
 .form-button:hover {
     background: var(--color-buttons-hover);
+}
+
+.contacto--msj {
+    display: inline-flex;
+    margin-left: 2em;
+    font-weight: 500;
+    padding-top: 1em;
 }
 
 /* formato footer */
@@ -374,6 +384,13 @@ textarea {
     .contact--text {
         padding-bottom: 1.3em;
     }
+
+    .contacto--msj {
+        display: inline-flex;
+        margin-left: 10%;
+        font-weight: 500;
+        padding-top: 1em;
+    }
 }
 
 /* pantallas grandes (desktops) */
@@ -468,6 +485,13 @@ textarea {
 
     textarea {
         height: 5em;
+    }
+
+    .contacto--msj {
+        display: inline-flex;
+        margin-left: 20%;
+        font-weight: 500;
+        padding-top: 1em;
     }
 
     .footer {
