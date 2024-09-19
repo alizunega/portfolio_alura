@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /* DEFINICION DE VARIABLES */
 :root {
-
-
-    --color-background: linear-gradient(180deg, #D9AFD9 0%, #ffffff 33%, #97D9E1 66%, #ffffff 100%);
+    --color-background: linear-gradient(180deg,
+            #d9afd9 0%,
+            #ffffff 33%,
+            #97d9e1 66%,
+            #ffffff 100%);
     --color-background-cajas: #c0d0d7ec;
     --color-background-footer: #203754ae;
     --color-background-header: rgba(181, 183, 242, 0.714);
@@ -14,7 +16,7 @@
     --font-titulo: "Roboto", sans-serif;
     --font-texto: "Lato", sans-serif;
     --font-size_titulo: 1rem;
-    --font-size_texto: .8rem;
+    --font-size_texto: 0.8rem;
 }
 
 /* FIN DE DEFINICION DE VARIABLES */
@@ -27,7 +29,7 @@ body {
     line-height: 1.5;
     min-height: 100dvh;
     min-width: 100dvw;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 body {
@@ -36,12 +38,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     color: var(--color-fonts);
-    font-size: var(--font-size);
+    font-size: var(--font-size_texto);
     font-family: var(--font-titulo);
     height: auto;
     width: 100%;
 }
-
 
 ul {
     list-style: none;
@@ -62,10 +63,9 @@ a {
     padding: 1em;
     background-color: var(--color-background-header);
     font-family: var(--font-titulo);
-    font-size: .9em;
+    font-size: 0.9em;
     width: 100%;
 }
-
 
 .imagen--button {
     background-color: var(--color-background-cajas);
@@ -85,8 +85,7 @@ a {
 .header--nav-item {
     text-decoration: none;
     color: black;
-    margin: 0 .4em;
-
+    margin: 0 0.4em;
 }
 
 .header--nav-button,
@@ -97,49 +96,76 @@ a {
     border-radius: 0;
 }
 
+/* formato cuerpo pagina */
+/* presentacion */
 .imagen-banner {
     width: 100%;
 }
 
-/* formato cuerpo pagina */
-
 .main--imagen-perfil {
-    width: 200px;
-
+    width: 40%;
+    margin-left: 25%;
 }
-
 
 .main {
     display: flex;
     flex-direction: column;
-    margin: .7em 2em;
+    margin: 0.7em 2em;
     gap: 3em;
 }
 
-
 .iconos--redes {
     display: flex;
-    gap: 1em;
+    gap: 0.9em;
 }
 
 .bio--icono {
     width: 2.5em;
-
 }
 
-/* skills */
+.presentacion--texto {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 6px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* formato formaciones */
+
+.formaciones--card-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5em;
+}
+
+.card-item {
+    background-color: var(--color-background-header);
+    border: 1px solid #ccc;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: .3em .9em;
+}
+
+.card--img {
+    width: 40em;
+}
+
+.card--description {
+    width: 90%;
+    white-space: wrap;
+}
+
+
+/* formato grilla skills */
+.section--skills-item h2 {
+    padding: 0.8em;
+}
 
 .imagen--soft,
 .imagen--hard {
     width: 5.7em;
     border: solid white 2px;
-    padding: .5em;
-}
-
-/* formato grilla skills */
-
-.section--skills-item h2 {
-    padding: .8em;
+    padding: 0.5em;
 }
 
 ul.section--hard-list,
@@ -162,24 +188,24 @@ ul.section--soft-list {
 
 .alert {
     position: fixed;
-    background: linear-gradient(rgba(127, 155, 194, 0.933), rgba(125, 125, 125, 0.88));
+    background: linear-gradient(rgba(127, 155, 194, 0.933),
+            rgba(125, 125, 125, 0.88));
     box-shadow: 0 0 10px rgba(0, 0, 0);
     color: rgb(2, 2, 2);
     top: 10rem;
     left: 50%;
     transform: translate(-50%, 50%);
     padding: 1em 2em;
-    border-radius: .8em;
+    border-radius: 0.8em;
 }
 
-
 form {
-    margin: .8em auto;
+    margin: 0.8em auto;
     width: 100%;
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
-    box-shadow: 0 0 .5em rgb(52, 52, 52)
+    box-shadow: 0 0 0.5em rgb(52, 52, 52);
 }
 
 form li+li {
@@ -190,7 +216,7 @@ label {
     display: inline-block;
     width: 100%;
     text-align: right;
-    margin-bottom: .7em;
+    margin-bottom: 0.7em;
     font-weight: 500;
 }
 
@@ -201,11 +227,10 @@ input {
 input,
 textarea {
     width: 100%;
-    padding: .5em .9em;
+    padding: 0.5em 0.9em;
     box-sizing: border-box;
     border: 1px solid #999;
     color: #000;
-
 }
 
 input:focus,
@@ -224,9 +249,9 @@ textarea {
 
 .form-button {
     align-self: center;
-    padding: .8em 1.3em;
+    padding: 0.8em 1.3em;
     text-align: center;
-    border-radius: .3em;
+    border-radius: 0.3em;
     background-color: var(--color-buttons);
     font-weight: 600;
 }
@@ -235,8 +260,6 @@ textarea {
     background: var(--color-buttons-hover);
 }
 
-
-
 /* formato footer */
 .footer {
     display: flex;
@@ -244,7 +267,7 @@ textarea {
     justify-content: space-evenly;
     align-items: center;
     font-family: var(--font-size_texto);
-    margin-bottom: .7em;
+    margin-bottom: 0.7em;
     margin-top: 1em;
 }
 
@@ -252,11 +275,10 @@ textarea {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .footer--redes-item {
-    margin: 0 .8em;
+    margin: 0 0.8em;
     align-self: center;
 }
 
@@ -267,7 +289,7 @@ textarea {
 /* pantallas medianas (tablets) */
 @media (min-width: 560px) {
     .header {
-        padding: .6em;
+        padding: 0.6em;
         font-size: var(--font-size_texto);
     }
 
@@ -296,6 +318,22 @@ textarea {
         justify-content: right;
     }
 
+    .bio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main--imagen-perfil {
+        width: 15em;
+        margin-left: 0%;
+    }
+
+    /* formato formaciones */
+
+
+    /* contacto */
     form {
         margin: 0 auto;
         width: 80%;
@@ -309,13 +347,12 @@ textarea {
         left: 50%;
         padding: 1.5em 3em;
     }
-
 }
 
 /* pantallas grandes (desktops) */
 @media (min-width: 757px) {
     .header {
-        padding: .8em;
+        padding: 0.8em;
         font-size: var(--font-size_texto);
         font-weight: 500;
     }
@@ -335,6 +372,11 @@ textarea {
         display: none;
     }
 
+    .main--imagen-perfil {
+        width: 15em;
+        margin-left: 10%;
+    }
+
     .bio {
         display: flex;
         flex-direction: row;
@@ -343,10 +385,13 @@ textarea {
 
     .presentacion--texto {
         width: 35em;
-        padding: .6rem;
+        padding: 0.6rem;
         border-radius: 6px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
+
+    /* formaciones */
+
 
     /* formulario de contacto */
 
@@ -363,22 +408,21 @@ textarea {
     }
 
     form li+li {
-        margin-top: .7em;
+        margin-top: 0.7em;
     }
 
     .form-button {
         align-self: center;
         padding: 1em 2em;
         text-align: center;
-        border-radius: .3em;
-
+        border-radius: 0.3em;
     }
 
     label {
         display: inline-block;
         width: 100%;
         text-align: right;
-        margin-bottom: .7em;
+        margin-bottom: 0.7em;
     }
 
     input {
@@ -386,7 +430,6 @@ textarea {
     }
 
     textarea {
-
         height: 5em;
     }
 
@@ -394,11 +437,9 @@ textarea {
         flex-direction: row;
         align-items: center;
         height: auto;
-
     }
 
     .icono--footer {
         width: 3em;
     }
-
 }
