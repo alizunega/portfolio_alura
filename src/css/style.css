@@ -8,6 +8,8 @@
             #97d9e1 66%,
             #ffffff 100%);
     --color-background-cajas: #c0d0d7ec;
+    --color-background-cards: radial-gradient(circle farthest-corner at 54.5% 94.8%, rgba(227, 250, 251, .7) 0.4%, rgba(226, 241, 233, .8) 28.4%, rgba(198, 231, 215, .5) 58.4%, rgba(245, 237, 253, .9) 90%);
+
     --color-background-footer: #203754ae;
     --color-background-header: rgba(181, 183, 242, 0.714);
     --color-buttons: rgba(152, 211, 246, 0.88);
@@ -97,7 +99,7 @@ a {
 }
 
 /* formato cuerpo pagina */
-/* presentacion */
+/* seccion presentacion */
 .imagen-banner {
     width: 100%;
 }
@@ -130,40 +132,48 @@ a {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-/* formato formaciones */
-
-.formaciones--card-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1.5em;
+/* seccion grilla formaciones */
+.formaciones--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1em;
 }
 
-.card-item {
-    background-color: var(--color-background-header);
-    border: 1px solid #ccc;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: .3em .9em;
+.card {
+    background: var(--color-background-cards);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1em 1.5em;
 }
 
 .card--img {
-    width: 40em;
+    width: 20rem;
+    object-fit: cover;
 }
 
 .card--description {
     width: 90%;
     white-space: wrap;
+    padding: .3em .2em;
+}
+
+span.card--description {
+    color: black;
+}
+
+.card--title {
+    padding-top: .8em;
 }
 
 
-/* formato grilla skills */
+/* seccion skills */
 .section--skills-item h2 {
     padding: 0.8em;
 }
 
 .imagen--soft,
 .imagen--hard {
-    width: 5.7em;
+    width: 9em;
     border: solid white 2px;
     padding: 0.5em;
 }
@@ -330,8 +340,14 @@ textarea {
         margin-left: 0%;
     }
 
-    /* formato formaciones */
 
+    /* formato formaciones */
+    .formaciones--container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2em;
+
+    }
 
     /* contacto */
     form {
@@ -390,7 +406,13 @@ textarea {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
-    /* formaciones */
+    /* formato formaciones */
+    .formaciones--container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 1.5em;
+    }
 
 
     /* formulario de contacto */
