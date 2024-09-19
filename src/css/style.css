@@ -209,6 +209,12 @@ ul.section--soft-list {
     border-radius: 0.8em;
 }
 
+.contact--text {
+    padding-bottom: 1em;
+    font-size: medium;
+    font-weight: 500;
+}
+
 form {
     margin: 0.8em auto;
     width: 100%;
@@ -341,6 +347,7 @@ textarea {
     }
 
 
+
     /* formato formaciones */
     .formaciones--container {
         display: grid;
@@ -362,6 +369,10 @@ textarea {
         top: 10rem;
         left: 50%;
         padding: 1.5em 3em;
+    }
+
+    .contact--text {
+        padding-bottom: 1.3em;
     }
 }
 
@@ -421,6 +432,10 @@ textarea {
         top: 10rem;
         left: 50%;
         padding: 4em 3em;
+    }
+
+    .contact--text {
+        padding-bottom: 1.6em;
     }
 
     form {
