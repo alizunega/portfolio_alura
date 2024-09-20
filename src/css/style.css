@@ -18,7 +18,7 @@
     --font-titulo: "Roboto", sans-serif;
     --font-texto: "Lato", sans-serif;
     --font-size_titulo: 1rem;
-    --font-size_texto: 0.8rem;
+    --font-size_texto: .8rem;
 }
 
 /* FIN DE DEFINICION DE VARIABLES */
@@ -151,17 +151,17 @@ a {
     object-fit: cover;
 }
 
-.card--description {
+.formaciones--card-description {
     width: 90%;
     white-space: wrap;
     padding: .3em .2em;
 }
 
-span.card--description {
+span.formaciones--card-description {
     color: black;
 }
 
-.card--title {
+.formaciones--card-title {
     padding-top: .8em;
 }
 
@@ -173,7 +173,7 @@ span.card--description {
 
 .imagen--soft,
 .imagen--hard,
-.imagen--hobbie {
+.imagen--hobby {
     width: 9em;
     border: solid white 2px;
     padding: 0.5em;
@@ -181,7 +181,7 @@ span.card--description {
 
 ul.section--hard-list,
 ul.section--soft-list,
-ul.section--hobbie-list {
+ul.section--hobby-list {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -190,7 +190,7 @@ ul.section--hobbie-list {
 
 .section--hard-item,
 .section--soft-item,
-.section--hobbie-item {
+.section--hobby-item {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -316,7 +316,8 @@ textarea {
 @media (min-width: 560px) {
     .header {
         padding: 0.6em;
-        font-size: var(--font-size_texto);
+        font-size: 1.2rem;
+
     }
 
     .header--imagen {
@@ -397,8 +398,10 @@ textarea {
 @media (min-width: 757px) {
     .header {
         padding: 0.8em;
-        font-size: var(--font-size_texto);
         font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+        align-self: center;
     }
 
     .header--imagen {
