@@ -360,38 +360,41 @@
         <section id="contacto">
             <h1 class="contact--tittle">Contacto</h1>
             <p class="contact--text">Quieres contactarme? Completa el siguiente formulario!</p>
-            <div class="alert" hidden>
-                <p>El mensaje se envió correctamente.</p>
-                <p>Me pondré en contacto con usted a la brevedad.</p>
-                <p>Gracias!</p>
-            </div>
+
             <form id="contact-form" class="contact-form">
+                <div id="success-message" hidden>Formulario enviado correctamente.</div>
                 <ul>
                     <li>
                         <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required
-                            placeholder="Ingresa tu nombre" />
+                        <input type="text" id="name" name="name" autocomplete="name" placeholder="Ingresa tu nombre" />
+                        <span id="name-error" class="error"></span>
                     </li>
                     <li>
                         <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required
+                        <input type="email" id="email" name="email" autocomplete="email"
                             placeholder="Ingresa tu email" />
+                        <span id="email-error" class="error"></span>
                     </li>
                     <li>
                         <label for="subject">Asunto:</label>
                         <input type="text" id="subject" name="subject" autocomplete="subject"
                             placeholder="El asunto de tu mensaje" />
+                        <span id="subject-error" class="error"></span>
                     </li>
                     <li>
                         <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" placeholder="Escriba aquí su consulta." required
+                        <textarea id="message" name="message" placeholder="Escriba aquí su consulta."
                             autocomplete="off"></textarea>
+                        <span id="message-error" class="error"></span>
                     </li>
                     <li class="item-button">
-                        <button type="submit" class="form-button" value="Enviar">Enviar</button>
+                        <button id="submit-button" type="submit" class="form-button" value="Enviar"
+                            disabled>Enviar</button>
                     </li>
                 </ul>
             </form>
+
+
             <span class="contacto--msj">Puedes enviarme un mail o escribirme por Telegram. Abajo te dejo los
                 links</span>
 
@@ -417,8 +420,7 @@
             </li>
         </ul>
     </footer>
-
-    <script src="./src/js/app.js"></script>
+    <script type="module" src="./src/js/app.js"></script>
 </body>
 
 </html>

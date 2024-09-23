@@ -1,3 +1,4 @@
+import * as validaciones from "./validaciones.js";
 //activacion del boton menu
 document.addEventListener("click", () => {
   const menu = document.querySelector(".header--nav-list");
@@ -15,44 +16,68 @@ document.addEventListener("click", () => {
   }
 });
 
-//Manejo de formulario y alerta
-document.getElementById("contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  // Obtén los valores del formulario
-  let form = document.querySelector("#contact-form");
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let subject = document.getElementById("subject").value;
-  let message = document.getElementById("message").value;
-  let alert = document.querySelector(".alert");
-  if (name && email && message) {
-    // Mostrar mensaje de envio correcto
-    alert.style.display = "block";
+//validar campos
 
-    //Muestra el msj por 3 segundos, luego lo cierra
-    setTimeout(() => {
-      alert.style.display = "none";
-      form.reset();
-    }, 3000);
-  } else {
-    // Muestra mensaje de error al enviar
-    alert("El mensaje no pudo enviarse. Intente más tarde.");
-  }
-});
+// Función para validar cada campo
+function validarCampos() {
+  let isValid = true;
 
-// document
-//   .getElementById("contact-form")
-//   .addEventListener("submit", function (event) {
-//     event.preventDefault();
+  // Validar nombre
+  const name = document.getElementById("name").value;
+  const nameError = document.getElementById("name-error");
+  const nameValidation = validaciones.validarNombre(name);
+  nameError.textContent = nameValidation;
+  if (nameValidation !== "") isValid = false;
 
-//     // Obtén los valores del formulario
-//     let name = document.getElementById("name").value;
-//     let email = document.getElementById("email").value;
-//     let message = document.getElementById("message").value;
+  // Validar email
+  const email = document.getElementById("email").value;
+  const emailError = document.getElementById("email-error");
+  const emailValidation = validaciones.validarEmail(email);
+  emailError.textContent = emailValidation;
+  if (emailValidation !== "") isValid = false;
 
-//     // Crea el enlace mailto
-//     var mailtoLink = `mailto:ali.zunega@gmail.com?subject=Contacto de ${name}&body=Nombre: ${name}%0AEmail: ${email}%0AMensaje: ${message}`;
+  // Validar asunto
+  const subject = document.getElementById("subject").value;
+  const subjectError = document.getElementById("subject-error");
+  const subjectValidation = validaciones.validarAsunto(subject);
+  subjectError.textContent = subjectValidation;
+  if (subjectValidation !== "") isValid = false;
 
-//     // Abre el cliente de correo
-//     window.location.href = mailtoLink;
-//   });
+  // Validar mensaje
+  const message = document.getElementById("message").value;
+  const messageError = document.getElementById("message-error");
+  const messageValidation = validaciones.validarMensaje(message);
+  messageError.textContent = messageValidation;
+  if (messageValidation !== "") isValid = false;
+
+  // Habilitar o deshabilitar el botón de envío
+  document.getElementById("submit-button").disabled = !isValid;
+}
+
+function manejarEnvioFormulario(event) {
+  event.preventDefault(); // Evita la recarga de la página
+
+  // Mostrar mensaje de éxito
+  const successMessage = document.getElementById("success-message");
+  successMessage.style.display = "block";
+
+  // Ocultar el mensaje después de 3 segundos
+  setTimeout(() => {
+    successMessage.style.display = "none";
+    document.getElementById("contact-form").reset(); // Opcional: limpiar el formulario
+  }, 3000);
+}
+
+// Asociar la validación a los eventos de entrada de los campos
+document.getElementById("name").addEventListener("input", validarCampos);
+document.getElementById("email").addEventListener("input", validarCampos);
+document.getElementById("subject").addEventListener("input", validarCampos);
+document.getElementById("message").addEventListener("input", validarCampos);
+
+// Asociar el evento de envío del formulario
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", manejarEnvioFormulario);
+
+// Inicializar la validación al cargar la página
+document.addEventListener("DOMContentLoaded", validarCampos);

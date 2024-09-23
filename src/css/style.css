@@ -234,6 +234,16 @@ ul.section--hobby-list {
 }
 
 /* formato formulario contacto */
+.error {
+    color: red;
+}
+
+#success-message {
+    color: green;
+    font-size: larger;
+    text-align: center;
+    font-weight: 600;
+}
 
 .alert {
     position: fixed;
