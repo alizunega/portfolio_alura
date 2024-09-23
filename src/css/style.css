@@ -12,7 +12,7 @@
 
     --color-background-footer: #203754ae;
     --color-background-header: rgba(181, 183, 242, 0.714);
-    --color-buttons: rgba(152, 211, 246, 0.88);
+    --color-buttons: rgba(4, 161, 252, 0.88);
     --color-buttons-hover: #67d2de;
     --color-fonts: #4c4b4b;
     --font-titulo: "Roboto", sans-serif;
@@ -132,7 +132,7 @@ a {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-/* seccion grilla formaciones */
+/* seccion grilla formaciones y proyectos*/
 .formaciones--container {
     display: grid;
     grid-template-columns: 1fr;
@@ -151,18 +151,54 @@ a {
     object-fit: cover;
 }
 
-.formaciones--card-description {
+.formaciones--card-description,
+.proyecto--card-description {
     width: 90%;
     white-space: wrap;
     padding: .3em .2em;
+    flex-grow: 1;
 }
 
 span.formaciones--card-description {
     color: black;
 }
 
-.formaciones--card-title {
+.formaciones--card-title,
+.proyecto--card-title {
+    padding-top: .6em;
+}
+
+.proyectos--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1em;
+}
+
+.proyectos--card {
+    background-color: #ebdefb;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1em 1.5em;
+}
+
+.proyecto--card-img {
+    width: 25rem;
+    object-fit: cover;
+    height: max-content;
+}
+
+.card--buttons {
+    display: flex;
+    gap: 1em;
     padding-top: .8em;
+    justify-content: baseline;
+}
+
+.proyecto--link-repo {
+    background-color: var(--color-buttons);
+    padding: .6em .9em;
+    border-radius: .4em;
+    font-weight: 500;
 }
 
 
@@ -272,6 +308,7 @@ textarea {
     text-align: center;
     border-radius: 0.3em;
     background-color: var(--color-buttons);
+    font-size: 1.2em;
     font-weight: 600;
 }
 
@@ -367,6 +404,14 @@ textarea {
 
     }
 
+    /* formato proyectos */
+    .proyectos--container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        gap: 1em;
+    }
+
     /* contacto */
     form {
         margin: 0 auto;
@@ -435,14 +480,31 @@ textarea {
         padding: 0.6rem;
         border-radius: 6px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        font-size: 1.2em;
+    }
+
+    #aboutme p {
+        font-size: 1.2rem;
     }
 
     /* formato formaciones */
     .formaciones--container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1em;
+    }
 
+    /* formato proyectos */
+    .proyectos--container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
         gap: 1.5em;
+    }
+
+    .proyecto--card-img {
+        width: 30rem;
+        object-fit: cover;
     }
 
 
