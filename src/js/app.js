@@ -1,4 +1,31 @@
 import * as validaciones from "./validaciones.js";
+
+//funcion para ir arriba
+
+let mybutton = document.getElementById("myBtn");
+let navFlotante = document.querySelector(".nav--flotante");
+
+//muestra el boton cuando ha bajado
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    mybutton.style.display = "block";
+    navFlotante.style.display = "inline-flex";
+  } else {
+    mybutton.style.display = "none";
+    navFlotante.style.display = "none";
+  }
+}
+mybutton.addEventListener("click", irArriba);
+
+function irArriba() {
+  document.body.scrollTop = 0; //para navegadores: Safari
+  document.documentElement.scrollTop = 0; // Para navegadores: Chrome, Firefox, IE and Opera
+}
+
 //activacion del boton menu
 document.addEventListener("click", () => {
   const menu = document.querySelector(".header--nav-list");
@@ -65,6 +92,7 @@ function manejarEnvioFormulario(event) {
   setTimeout(() => {
     successMessage.style.display = "none";
     document.getElementById("contact-form").reset(); // Opcional: limpiar el formulario
+    location.reload();
   }, 3000);
 }
 

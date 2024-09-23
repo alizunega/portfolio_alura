@@ -12,7 +12,7 @@
 
     --color-background-footer: #203754ae;
     --color-background-header: rgba(181, 183, 242, 0.714);
-    --color-buttons: rgba(4, 161, 252, 0.88);
+    --color-buttons: rgba(136, 136, 251, 0.88);
     --color-buttons-hover: #67d2de;
     --color-fonts: #4c4b4b;
     --font-titulo: "Roboto", sans-serif;
@@ -57,12 +57,45 @@ a {
     padding: 0;
 }
 
+
+/* formato  nav flotante */
+.nav--flotante {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    top: 0;
+    background-color: var(--color-background-footer);
+    height: 4.5rem;
+    width: 100%;
+}
+
+.iconos--list-flotante {
+    display: inline-flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+
+/* fin formato  nav flotante */
+
+/* formato flecha arriba */
+.myBtn--img {
+    width: 3rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
 /* formato header */
 .header {
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    margin: 0;
+    padding: 0em;
     background-color: var(--color-background-header);
     font-family: var(--font-titulo);
     font-size: 0.9em;
@@ -74,7 +107,7 @@ a {
 }
 
 .header--imagen {
-    width: 8em;
+    width: 9em;
 }
 
 .header--iconos-list {
@@ -96,12 +129,14 @@ a {
     outline: none;
     box-shadow: none;
     border-radius: 0;
+    right: 1em;
 }
 
 /* formato cuerpo pagina */
 /* seccion presentacion */
 .imagen-banner {
     width: 100%;
+
 }
 
 .main--imagen-perfil {
@@ -212,6 +247,7 @@ span.formaciones--card-description {
     width: 9em;
     border: solid white 2px;
     padding: 0.5em;
+    background: var(--color-background-cards);
 }
 
 ul.section--hard-list,
@@ -230,7 +266,7 @@ ul.section--hobby-list {
     flex-direction: column;
     gap: 1em;
     align-items: center;
-    background: var(--color-background-cards);
+
 }
 
 /* formato formulario contacto */
@@ -362,13 +398,8 @@ textarea {
 /* pantallas medianas (tablets) */
 @media (min-width: 560px) {
     .header {
-        padding: 0.6em;
         font-size: 1.2rem;
 
-    }
-
-    .header--imagen {
-        width: 7em;
     }
 
     /* oculta el boton en pantallas medianas y grandes */
@@ -452,16 +483,10 @@ textarea {
 /* pantallas grandes (desktops) */
 @media (min-width: 757px) {
     .header {
-        padding: 0.8em;
         font-weight: 500;
         font-size: 1rem;
         text-align: center;
         align-self: center;
-    }
-
-    .header--imagen {
-        width: 9em;
-        /* Ajuste para pantallas grandes */
     }
 
     .header--nav-list {

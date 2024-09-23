@@ -38,10 +38,10 @@ export function validarAsunto(subject) {
 export function validarMensaje(message) {
   if (message === "") {
     return "Por favor, ingrese un mensaje.";
-  } else if (subject.length > 300) {
+  } else if (message.length > 300) {
     return "Mensaje muy largo";
   } else {
     return "";
   }
 }
-//validaciones para campos del formulario de contacto
+//fin validaciones para campos del formulario de contacto
