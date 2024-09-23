@@ -614,3 +614,82 @@ textarea {
         width: 3em;
     }
 }
+
+/* estilos para impresion */
+
+/* Estilos generales para la impresión */
+@media print {
+
+    /* Eliminar elementos innecesarios */
+    /* no imprime formulario de contacto, ni iconos de navegacion, ni footer */
+    form,
+    .myBtn,
+    .myBtn--img,
+    .nav--flotante,
+    #contacto,
+    .imagen-banner,
+    nav,
+    .footer,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Ajustar el contenido al ancho de la página */
+    body {
+        margin: 0;
+        padding: 0.7cm;
+        font-size: 12pt;
+        background: none;
+        /* Evitar fondos de pantalla */
+    }
+
+    /* Ajustar imágenes para que se vean bien en PDF */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* Forzar los enlaces a mostrarse como texto */
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Formatear la grilla de formaciones y proyectos */
+    .formaciones--container,
+    .proyectos--container {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Una columna para impresión */
+        gap: 10px;
+        /* Espacio entre las tarjetas */
+        width: 100%;
+    }
+
+    .formaciones--card,
+    .proyectos--card {
+        border: 1px solid #000;
+        /* Añadir borde para mejor visualización */
+        padding: 8px;
+        background-color: white;
+        /* Evitar color de fondo si es oscuro */
+    }
+
+    .section--skills-lista {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section--hard-list,
+    .section--soft-list,
+    .section--hobby-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+
+    .section--skills-lista img {
+        display: none;
+    }
+}
