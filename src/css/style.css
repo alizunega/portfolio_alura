@@ -184,7 +184,6 @@ span.formaciones--card-description {
 .proyecto--card-img {
     width: 25rem;
     object-fit: cover;
-    height: max-content;
 }
 
 .card--buttons {
@@ -231,6 +230,7 @@ ul.section--hobby-list {
     flex-direction: column;
     gap: 1em;
     align-items: center;
+    background: var(--color-background-cards);
 }
 
 /* formato formulario contacto */
@@ -312,7 +312,7 @@ textarea {
     text-align: center;
 }
 
-.form-button {
+.form-button:enabled {
     align-self: center;
     padding: 0.8em 1.3em;
     text-align: center;
@@ -322,7 +322,7 @@ textarea {
     font-weight: 600;
 }
 
-.form-button:hover {
+.form-button:enabled:hover {
     background: var(--color-buttons-hover);
 }
 
