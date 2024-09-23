@@ -176,10 +176,18 @@ a {
     gap: 1em;
 }
 
-.card {
+.formaciones--card {
     background: var(--color-background-cards);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 1em 1.5em;
+    transition: transform 0.3s ease-in-out, z-index 0.3s;
+}
+
+/* Animación al hacer hover */
+.formaciones--card:hover,
+.proyectos--card:hover {
+    transform: scale(1.1) translateY(-30px);
+    z-index: 10;
 }
 
 .card--img {
@@ -215,6 +223,7 @@ span.formaciones--card-description {
     background-color: #ebdefb;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 1em 1.5em;
+    transition: transform 0.3s ease-in-out, z-index 0.3s;
 }
 
 .proyecto--card-img {
