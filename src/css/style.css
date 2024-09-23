@@ -115,6 +115,7 @@ a {
     flex-direction: row;
     justify-content: space-around;
     gap: 1em;
+    margin-right: 1em;
 }
 
 .header--nav-item {

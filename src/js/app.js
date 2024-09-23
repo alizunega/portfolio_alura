@@ -27,9 +27,9 @@ function irArriba() {
 }
 
 //activacion del boton menu
-document.addEventListener("click", () => {
-  const menu = document.querySelector(".header--nav-list");
-  const button = document.querySelector(".header--nav-button");
+const menu = document.querySelector(".header--nav-list");
+const button = document.querySelector(".header--nav-button");
+button.addEventListener("click", () => {
   menu.hidden = !menu.hidden;
 
   // Ocultar el botón cuando el menú esté visible
