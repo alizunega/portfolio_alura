@@ -60,7 +60,7 @@ a {
 
 /* formato  nav flotante */
 .nav--flotante {
-    display: flex;
+    /* display: flex; */
     justify-content: space-around;
     position: fixed;
     flex-direction: row;

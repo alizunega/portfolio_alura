@@ -11,9 +11,12 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
     mybutton.style.display = "block";
-    navFlotante.style.display = "inline-flex";
+    navFlotante.style.display = "flex";
   } else {
     mybutton.style.display = "none";
     navFlotante.style.display = "none";
