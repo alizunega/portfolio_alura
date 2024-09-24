@@ -311,6 +311,10 @@ ul.section--hobby-list {
     font-weight: 500;
 }
 
+#contacto h1 {
+    font-size: 2em;
+}
+
 form {
     margin: 0.8em auto;
     width: 100%;
