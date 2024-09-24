@@ -13,7 +13,7 @@
     --color-background-footer: #203754ae;
     --color-background-header: rgba(181, 183, 242, 0.714);
     --color-buttons: rgba(136, 136, 251, 0.88);
-    --color-buttons-hover: #67d2de;
+    --color-buttons-hover: #49316d;
     --color-fonts: #4c4b4b;
     --font-titulo: "Roboto", sans-serif;
     --font-texto: "Lato", sans-serif;
@@ -236,10 +236,11 @@ span.formaciones--card-description {
     gap: 1em;
     padding-top: .8em;
     justify-content: baseline;
+    color: whitesmoke;
 }
 
 .proyecto--link-repo {
-    background-color: var(--color-buttons);
+    background-color: var(--color-buttons-hover);
     padding: .6em .9em;
     border-radius: .4em;
     font-weight: 500;
@@ -356,6 +357,7 @@ textarea {
 
 .item-button {
     text-align: center;
+
 }
 
 .form-button:enabled {
@@ -366,10 +368,12 @@ textarea {
     background-color: var(--color-buttons);
     font-size: 1.2em;
     font-weight: 600;
+    color: black
 }
 
 .form-button:enabled:hover {
     background: var(--color-buttons-hover);
+    color: #fcfbfb;
 }
 
 .contacto--msj {
