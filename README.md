@@ -6,7 +6,7 @@ Challenge Portfolio Web para curso [Alura ONE](https://github.com/alura-es-curso
 
 Proyecto: Challenge Portfolio Web para curso Alura ONE - Especialización FrontEnd
 
-## Requerimientos del proyecto
+## Requerimientos del proyecto :memo:
 
 ### Elementos principales de la página
 
@@ -41,13 +41,16 @@ portfolio_alura
 |   |   ├── styles.css
 |   |   └── reset.css
 │   └── js
+│       ├── validaciones.js
 |       └── app.js
 ├── assets
 │   ├── iconos
-│   ├── hard skills
-│   ├── soft skills
+│   ├── hard_skills
+│   ├── soft_skills
 │   ├── proyectos
 │   ├── perfil
+│   ├── formaciones
+│   └── hobbies
 |
 ├── index.html
 ├── LICENSE
@@ -56,16 +59,16 @@ portfolio_alura
 
 ## Despliegue :package:
 
-[_Portfolio Alura_](En Proceso)
+[_Portfolio Alura_](https://alizunega.github.io/portfolio_alura/)
 
-## Consideraciones :memo:
+## Consideraciones :bulb:
 
 > [!NOTE]
 >
-> Podrá acceder a información de contacto    
-> Contiene información sobre proyectos realizados      
-> Contiene información sobre estudios completados    
-> Podrá conocer mis hard y soft skills    
+> Podrá acceder a información de contacto  
+> Contiene información sobre proyectos realizados  
+> Contiene información sobre estudios completados  
+> Podrá conocer mis hard y soft skills
 
 ## Construido Con :hammer_and_wrench:
 
