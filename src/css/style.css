@@ -647,10 +647,10 @@ textarea {
     /* Ajustar el contenido al ancho de la página */
     body {
         margin: 0;
-        padding: 0.7cm;
+        padding: 0.5cm;
         font-size: 12pt;
         background: none;
-        /* Evitar fondos de pantalla */
+        background-color: white;
     }
 
     /* Ajustar imágenes para que se vean bien en PDF */
@@ -666,45 +666,59 @@ textarea {
         text-decoration: none;
     }
 
+    .header {
+        display: flex;
+    }
+
+    .presentacion--texto {
+        display: block;
+        box-shadow: none;
+    }
+
+    section.bio img {
+        padding-top: 0;
+        width: 20%;
+    }
+
     /* Formatear la grilla de formaciones y proyectos */
     .formaciones--container,
     .proyectos--container {
         display: grid;
         grid-template-columns: 1fr;
-        /* Una columna para impresión */
         gap: 10px;
-        /* Espacio entre las tarjetas */
         width: 100%;
     }
 
     .formaciones--card,
     .proyectos--card {
         border: 1px solid #000;
-        /* Añadir borde para mejor visualización */
         padding: 8px;
-        background-color: white;
-        /* Evitar color de fondo si es oscuro */
+
     }
 
     .section--skills-lista {
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .section--hard-list,
-    .section--soft-list,
-    .section--hobby-list {
+    ul.section--hard-list,
+    ul.section--soft-list,
+    ul.section--hobby-list {
         display: block;
-        padding-left: 0;
+        margin: 0;
+        padding: 0;
     }
 
-    .section--hard-list,
-    .section--soft-list,
-    .section--hobby-list {
+    li.section--hard-item,
+    li.section--soft-item,
+    li.section--hobby-item {
         display: block;
-        margin-bottom: 5px;
+        list-style-type: none;
+        margin-bottom: 10px;
     }
 
     .section--skills-lista img {
         display: none;
     }
+
 }
