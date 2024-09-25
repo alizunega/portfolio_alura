@@ -687,17 +687,22 @@ textarea {
     }
 
     .section--skills-lista {
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 
     .section--hard-list,
     .section--soft-list,
     .section--hobby-list {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: block;
+        padding-left: 0;
     }
 
+    .section--hard-list,
+    .section--soft-list,
+    .section--hobby-list {
+        display: block;
+        margin-bottom: 5px;
+    }
 
     .section--skills-lista img {
         display: none;
