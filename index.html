@@ -56,6 +56,7 @@
             <img src="./assets/iconos/header/alicia.PNG" alt="Logo Perfil" class="header--imagen">
         </a>
         <nav class="header--nav">
+            <!-- nav dispositivos chicos -->
             <ul class="header--iconos-list">
                 <li class="header--iconos-item button-menu">
                     <button type="button" class="header--nav-button">
@@ -96,6 +97,7 @@
                     </ul>
                 </li>
             </ul>
+            <!-- nav desktop -->
             <ul class="header--nav-list" hidden>
                 <li class="header--nav-item"><a href="#home">Inicio
                         <img src="./assets/iconos/header/home.svg" alt="Icono Home">
@@ -105,7 +107,7 @@
                         <img src="./assets/iconos/header/perfil.svg" alt="Icono Perfil">
                     </a>
                 </li>
-                <li class="header--nav-item"><a href="#formaciones">Educacion
+                <li class="header--nav-item"><a href="#formaciones">Formaciones
                         <img src="./assets/iconos/header/school.svg" alt="Icono Formaciones">
                     </a>
                 </li>
@@ -157,7 +159,6 @@
             <h1>Sobre mi</h1>
             <p> Me apasiona la tecnología y la programación. Pero también me gusta mucho leer y ver series.</p>
             <p>Soy una persona responsable, organizada y con ganas de aprender.</p>
-            <p>Comencé con cursos de DBA de Oracle y también de Redes y telecomunicaciones.</p>
             <p>La maternidad me llevó a realizar cursos online y ahí descubrí mi interés por la programación.</p>
             <p>He finalizado cursos de Python y Nodejs. Actualmente estoy realizando mi
                 especialización de mano de Alura Latam y ONE en FrontEnd.</p>
@@ -437,6 +438,7 @@
                         <label for="message">Mensaje:</label>
                         <textarea id="message" name="message" placeholder="Escriba aquí su consulta."
                             autocomplete="off"></textarea>
+                        <span id="charCount">0/300 caracteres</span>
                         <span id="message-error" class="error"></span>
                     </li>
                     <li class="item-button">

@@ -73,8 +73,9 @@ a {
 
 .iconos--list-flotante {
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 1rem;
+    align-items: center;
 }
 
 
@@ -102,6 +103,7 @@ a {
     width: 100%;
 }
 
+
 .imagen--button {
     background-color: var(--color-background-cajas);
 }
@@ -118,10 +120,18 @@ a {
     margin-right: 1em;
 }
 
+.header--nav-list {
+    vertical-align: middle;
+    padding-left: 1.5em;
+    margin: auto;
+}
+
 .header--nav-item {
     text-decoration: none;
     color: black;
     margin: 0 0.4em;
+    padding: 0.3em;
+    border-bottom: solid 1px #000;
 }
 
 .header--nav-button,
@@ -433,6 +443,11 @@ textarea {
 
     .header--nav-list {
         display: none;
+
+    }
+
+    .header--nav-item {
+        border-bottom: none;
     }
 
     .iconos--list {
@@ -509,7 +524,16 @@ textarea {
 
     .header--nav-list {
         display: flex;
-        gap: 2em;
+
+    }
+
+    .header--nav-item {
+        text-decoration: none;
+        color: black;
+        margin: 0 0.4em;
+        padding: 0.3em;
+        border-bottom: none;
+        vertical-align: middle;
     }
 
     /* oculta la lista de iconos en pantallas grandes */

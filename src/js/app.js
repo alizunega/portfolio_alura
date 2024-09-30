@@ -48,6 +48,15 @@ button.addEventListener("click", () => {
 
 //validar campos
 
+// Función para contar caracteres
+function updateCount() {
+  const textarea = document.getElementById("message");
+  const charCount = textarea.value.length;
+  document.getElementById(
+    "charCount"
+  ).innerText = `${charCount}/300 caracteres`;
+}
+
 // Función para validar cada campo
 function validarCampos() {
   let isValid = true;
@@ -74,6 +83,7 @@ function validarCampos() {
   if (subjectValidation !== "") isValid = false;
 
   // Validar mensaje
+
   const message = document.getElementById("message").value;
   const messageError = document.getElementById("message-error");
   const messageValidation = validaciones.validarMensaje(message);
@@ -103,7 +113,10 @@ function manejarEnvioFormulario(event) {
 document.getElementById("name").addEventListener("input", validarCampos);
 document.getElementById("email").addEventListener("input", validarCampos);
 document.getElementById("subject").addEventListener("input", validarCampos);
-document.getElementById("message").addEventListener("input", validarCampos);
+document.getElementById("message").addEventListener("input", function () {
+  validarCampos();
+  updateCount();
+});
 
 // Asociar el evento de envío del formulario
 document
