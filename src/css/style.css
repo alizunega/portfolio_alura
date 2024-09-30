@@ -134,6 +134,10 @@ a {
     border-bottom: solid 1px #000;
 }
 
+.header--nav-item:last-child {
+    border-bottom: none;
+}
+
 .header--nav-button,
 .imagen--button {
     border: none;
@@ -141,6 +145,7 @@ a {
     box-shadow: none;
     border-radius: 0;
     right: 1em;
+    background-color: #7f55fb;
 }
 
 /* formato cuerpo pagina */
